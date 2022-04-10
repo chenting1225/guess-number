@@ -2,8 +2,11 @@
 #讓使用者重複輸入手機去猜
 #猜對了，印出"你答對了"
 #猜錯了，要告訴他比答案大還小
+
 import random
-r = random.randint(1, 100)
+start = int(input('請使用者輸入開始值:'))
+end = int(input('請使用者輸入結束值:'))
+r = random.randint(start, end)
 count = 0
 while True:
 	count = count + 1
@@ -16,4 +19,4 @@ while True:
 		print('比答案大')
 	elif num < r:
 		print('比答案小')
-	print('這是你猜的第幾次', count,'次')
+	print('這是你猜的第', count,'次')
